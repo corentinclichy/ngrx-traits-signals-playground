@@ -11,7 +11,7 @@ import { ProductListDetailRemoteComponent } from './product-list-detail/product-
     ProductListDetailLocalComponent,
     ProductListDetailRemoteComponent,
   ],
-  template: '<product-list-detail-local/>',
+  template: '<product-list-detail-remote/>',
 })
 export class AppComponent {
   title = 'ngrx-traits-signals-playground';
