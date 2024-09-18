@@ -13,7 +13,7 @@ import { Product } from '../models';
 import { ProductService } from '../services/product.service';
 import { lastValueFrom } from 'rxjs';
 
-const entity = type<Product>();
+export const entity = type<Product>();
 export const ProductsLocalStore = signalStore(
   withEntities({ entity }),
   withCallStatus({ initialValue: 'loading' }),

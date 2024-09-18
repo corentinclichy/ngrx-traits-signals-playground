@@ -13,6 +13,7 @@ import { withEntities } from '@ngrx/signals/entities';
 import { Product } from '../models';
 import { ProductService } from '../services/product.service';
 import { map } from 'rxjs/operators';
+import { withProductLocalMethod } from './with-products-local-methods.feature';
 
 const entity = type<Product>();
 const collection = 'products';
@@ -50,4 +51,5 @@ export const ProductsRemoteStore = signalStore(
     loadProductDetail: ({ id }: { id: string }) =>
       inject(ProductService).getProductDetail(id),
   })),
+  withProductLocalMethod({})
 );
